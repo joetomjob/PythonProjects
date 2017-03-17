@@ -1,0 +1,5 @@
+efg
+Swords 4 9
+Donkeys 8 7
+Cookpots 6 2
+Elephant 80 90

@@ -1,0 +1,74 @@
+test case 1:
+#no students in the list
+Oliver ready
+Colleen ready
+Output:
+Students left unhelped:
+
+test case 2:
+# Oliver and Collen not ready
+Bob 3
+Dan 3
+Output:
+Bob is looking for help!
+Dan is looking for help!
+Students left unhelped:
+Bob
+Dan
+
+test case 3:
+# Only Colleen is ready
+Bob 3
+Dan 8
+Melissa 1
+Colleen ready
+Nate 1
+Gertrude 3
+Colleen ready
+Output:
+Bob is looking for help!
+Dan is looking for help!
+Melissa is looking for help!
+Colleen helping Dan
+Nate is looking for help!
+Gertrude is looking for help!
+Colleen helping Nate
+Students left unhelped:
+Bob
+Melissa
+Gertrude
+
+test case 4:
+# Only Oliver is ready
+Bob 3
+Dan 8
+Melissa 1
+Oliver ready
+Nate 1
+Gertrude 3
+Oliver ready
+
+Output:
+Nate is looking for help!
+Dan is looking for help!
+Oliver helping Nate
+Melissa is looking for help!
+Students left unhelped:
+Dan
+Melissa
+
+
+test case 5:
+#normal case
+Output:
+Bob is looking for help!
+Dan is looking for help!
+Melissa is looking for help!
+Oliver helping Bob
+Colleen helping Melissa
+Nate is looking for help!
+Gertrude is looking for help!
+Colleen helping Nate
+Oliver helping Dan
+Students left unhelped:
+Gertrude
