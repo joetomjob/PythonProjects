@@ -1,0 +1,5 @@
+x = 'wisdom'
+y = "wisdom"
+y[2] = 'a'
+x[3] = 'b'
+print(x)

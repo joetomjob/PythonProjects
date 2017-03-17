@@ -1,0 +1,55 @@
+
+class BTNode:
+    def __init__(self,data):
+        self.data = data
+        self.left = None
+        self.right = None
+
+class BinaryTree:
+    def __init__(self):
+        self.root = None
+
+    def traverse(self):
+        self.traverselefttoright(self.root)
+
+    def traverselefttoright(self,Node):
+        if Node is None:
+            return
+        else:
+            self.traverselefttoright(Node.left)
+            print(Node.data, end=' ')
+            self.traverselefttoright(Node.right)
+            #print(Node.data, end=' ')
+
+    def insert(self,value):
+        if self.root is None:
+            self.root = BTNode(value)
+        else:
+            self.insert_from(self.root,value)
+
+    def insert_from(self,node,value):
+        if value < node.data:
+            if node.left is None:
+                node.left = BTNode(value)
+            else:
+                self.insert_from(node.left,value)
+        else:
+            if node.right is None:
+                node.right= BTNode(value)
+            else:
+                self.insert_from(node.right, value)
+
+
+def main():
+    t = BinaryTree()
+    t.insert(10)
+    t.insert(6)
+    t.insert(15)
+    t.insert(8)
+    t.insert(2)
+    t.traverse()
+
+
+
+if __name__ == '__main__':
+    main()

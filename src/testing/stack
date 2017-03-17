@@ -1,0 +1,32 @@
+from collections import namedtuple
+
+stacknode = namedtuple('stacknode', ('data', 'next'))
+class stack:
+
+    def __init__(self):
+        self.top = None
+
+
+    def push(self, item):
+        newnode = stacknode(item,self.top)
+        self.top = newnode
+
+    def pop(self):
+        saveme = self.top
+        self.top = self.top.next
+        return saveme.data
+
+    def is_empty(self):
+        return self.top is None
+
+
+def main():
+    t = stack()
+    t.push(1)
+    t.push(2)
+    t.push(3)
+    while not t.is_empty():
+        print(t.pop())
+
+if __name__ == '__main__':
+    main()

@@ -1,0 +1,24 @@
+import dnalist
+
+def main():
+    obj = dnalist
+    t = obj.DNAList("AACCGGRTTT")
+    t.append("G")
+
+    x = obj.DNAList()
+    x = t.copy()
+    #t.join(x)
+    t.snip(2, 4)
+    f = obj.DNAList("")
+    r = obj.DNAList("")
+    t.splice(0, f)
+    t.replace("AA", r)
+
+    l = obj.DNAList('ACCTTG')
+    m = obj.DNAList('')
+    l.replace('CT', m)
+    print(l.__str__())
+
+
+if __name__ == '__main__':
+    main()

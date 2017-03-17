@@ -1,0 +1,16 @@
+def selection_sort(a):
+    for i in range(len(a)):
+        smallindex = i
+        for j in range(i,len(a)):
+            if a[j]<a[smallindex]:
+                smallindex = j
+        a[smallindex],a[i] = a[i],a[smallindex]
+    return a
+
+def main():
+    a = [9,8,7,99,5,5,4,3]
+    print(selection_sort(a))
+
+
+if  __name__ == '__main__':
+    main()
