@@ -26,7 +26,7 @@ class Ourheap:
 
     def smallest(self, ind):
         lf = 2 * ind + 1
-        rt = 2 + ind + 2
+        rt = 2 * ind + 2
 
         if lf > self.sz:
             return ind
